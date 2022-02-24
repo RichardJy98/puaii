@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uto.puai.mapper.Formmain0551Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.uto.puai.entity.Formmain0551">
+        <id column="ID" property="id" />
+        <result column="state" property="state" />
+        <result column="start_member_id" property="startMemberId" />
+        <result column="start_date" property="startDate" />
+        <result column="approve_member_id" property="approveMemberId" />
+        <result column="approve_date" property="approveDate" />
+        <result column="finishedflag" property="finishedflag" />
+        <result column="ratifyflag" property="ratifyflag" />
+        <result column="ratify_member_id" property="ratifyMemberId" />
+        <result column="ratify_date" property="ratifyDate" />
+        <result column="sort" property="sort" />
+        <result column="modify_member_id" property="modifyMemberId" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="field0001" property="field0001" />
+        <result column="field0010" property="field0010" />
+        <result column="field0011" property="field0011" />
+        <result column="field0012" property="field0012" />
+        <result column="field0014" property="field0014" />
+        <result column="field0015" property="field0015" />
+        <result column="field0016" property="field0016" />
+        <result column="field0017" property="field0017" />
+        <result column="field0018" property="field0018" />
+        <result column="field0019" property="field0019" />
+        <result column="field0020" property="field0020" />
+        <result column="field0021" property="field0021" />
+        <result column="field0022" property="field0022" />
+        <result column="field0023" property="field0023" />
+        <result column="field0024" property="field0024" />
+        <result column="field0025" property="field0025" />
+        <result column="field0026" property="field0026" />
+        <result column="field0027" property="field0027" />
+        <result column="field0032" property="field0032" />
+        <result column="field0033" property="field0033" />
+        <result column="field0035" property="field0035" />
+        <result column="field0036" property="field0036" />
+        <result column="field0037" property="field0037" />
+        <result column="field0038" property="field0038" />
+        <result column="field0039" property="field0039" />
+        <result column="field0040" property="field0040" />
+        <result column="field0041" property="field0041" />
+        <result column="field0042" property="field0042" />
+        <result column="field0072" property="field0072" />
+        <result column="field0073" property="field0073" />
+        <result column="field0074" property="field0074" />
+        <result column="field0075" property="field0075" />
+        <result column="field0076" property="field0076" />
+        <result column="field0077" property="field0077" />
+        <result column="field0078" property="field0078" />
+        <result column="field0079" property="field0079" />
+        <result column="field0081" property="field0081" />
+        <result column="field0028" property="field0028" />
+        <result column="field0034" property="field0034" />
+        <result column="field0082" property="field0082" />
+        <result column="field0085" property="field0085" />
+        <result column="field0086" property="field0086" />
+        <result column="field0087" property="field0087" />
+        <result column="field0088" property="field0088" />
+        <result column="field0029" property="field0029" />
+        <result column="field0013" property="field0013" />
+        <result column="field0089" property="field0089" />
+        <result column="field0090" property="field0090" />
+        <result column="field0091" property="field0091" />
+        <result column="field0092" property="field0092" />
+        <result column="field0093" property="field0093" />
+        <result column="field0094" property="field0094" />
+        <result column="field0095" property="field0095" />
+        <result column="field0096" property="field0096" />
+        <result column="field0097" property="field0097" />
+    </resultMap>
+
+</mapper>

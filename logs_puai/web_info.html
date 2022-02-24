@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Feb 24 09:10:28 CST 2022</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:28,469</td>
+<td class="Message">Starting PasswordGenerator using Java 1.8.0_251 on WORKPC with PID 17184 (started by Richard in Z:\Develop\IdeaProject\puai2)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">55</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:28,505</td>
+<td class="Message">The following profiles are active: dev</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:34,838</td>
+<td class="Message">Post-processing PropertySource instances</td>
+<td class="MethodOfCaller">postProcessBeanFactory</td>
+<td class="FileOfCaller">EnableEncryptablePropertiesBeanFactoryPostProcessor.java</td>
+<td class="LineOfCaller">39</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,054</td>
+<td class="Message">Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,067</td>
+<td class="Message">Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,068</td>
+<td class="Message">Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,068</td>
+<td class="Message">Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,069</td>
+<td class="Message">Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,070</td>
+<td class="Message">Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,071</td>
+<td class="Message">Converting PropertySource Config resource &#39;class path resource [application.yml]&#39; via location &#39;optional:classpath:/&#39; (document #1) [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,072</td>
+<td class="Message">Converting PropertySource Config resource &#39;class path resource [application.yml]&#39; via location &#39;optional:classpath:/&#39; (document #0) [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:35,394</td>
+<td class="Message">Property Filter custom Bean not found with name &#39;encryptablePropertyFilter&#39;. Initializing Default Property Filter</td>
+<td class="MethodOfCaller">lambda$null$2</td>
+<td class="FileOfCaller">DefaultLazyPropertyFilter.java</td>
+<td class="LineOfCaller">31</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:37,418</td>
+<td class="Message">Property Resolver custom Bean not found with name &#39;encryptablePropertyResolver&#39;. Initializing Default Property Resolver</td>
+<td class="MethodOfCaller">lambda$null$2</td>
+<td class="FileOfCaller">DefaultLazyPropertyResolver.java</td>
+<td class="LineOfCaller">35</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:37,426</td>
+<td class="Message">Property Detector custom Bean not found with name &#39;encryptablePropertyDetector&#39;. Initializing Default Property Detector</td>
+<td class="MethodOfCaller">lambda$null$2</td>
+<td class="FileOfCaller">DefaultLazyPropertyDetector.java</td>
+<td class="LineOfCaller">35</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:41,953</td>
+<td class="Message">Initializing ExecutorService &#39;applicationTaskExecutor&#39;</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">ExecutorConfigurationSupport.java</td>
+<td class="LineOfCaller">181</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:42,668</td>
+<td class="Message">Adding welcome page template: index</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">WelcomePageHandlerMapping.java</td>
+<td class="LineOfCaller">57</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:43,994</td>
+<td class="Message">Started PasswordGenerator in 23.84 seconds (JVM running for 31.373)</td>
+<td class="MethodOfCaller">logStarted</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">61</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 09:10:47,647</td>
+<td class="Message">Shutting down ExecutorService &#39;applicationTaskExecutor&#39;</td>
+<td class="MethodOfCaller">shutdown</td>
+<td class="FileOfCaller">ExecutorConfigurationSupport.java</td>
+<td class="LineOfCaller">218</td>
+</tr>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Thu Feb 24 10:02:37 CST 2022</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Message">Message</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="FileOfCaller">FileOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:41,180</td>
+<td class="Message">Starting PuaiApplication using Java 1.8.0_251 on WORKPC with PID 14176 (Z:\Develop\IdeaProject\puai2\target\classes started by Richard in Z:\Develop\IdeaProject\puai2)</td>
+<td class="MethodOfCaller">logStarting</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">55</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:41,184</td>
+<td class="Message">The following profiles are active: dev</td>
+<td class="MethodOfCaller">logStartupProfileInfo</td>
+<td class="FileOfCaller">SpringApplication.java</td>
+<td class="LineOfCaller">679</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:41,323</td>
+<td class="Message">Devtools property defaults active! Set &#39;spring.devtools.add-properties&#39; to &#39;false&#39; to disable</td>
+<td class="MethodOfCaller">logTo</td>
+<td class="FileOfCaller">DeferredLog.java</td>
+<td class="LineOfCaller">255</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:41,324</td>
+<td class="Message">For additional web related logging consider setting the &#39;logging.level.web&#39; property to &#39;DEBUG&#39;</td>
+<td class="MethodOfCaller">logTo</td>
+<td class="FileOfCaller">DeferredLog.java</td>
+<td class="LineOfCaller">255</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:43,887</td>
+<td class="Message">Post-processing PropertySource instances</td>
+<td class="MethodOfCaller">postProcessBeanFactory</td>
+<td class="FileOfCaller">EnableEncryptablePropertiesBeanFactoryPostProcessor.java</td>
+<td class="LineOfCaller">39</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:43,991</td>
+<td class="Message">Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:43,995</td>
+<td class="Message">Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:43,996</td>
+<td class="Message">Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:43,998</td>
+<td class="Message">Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:44,000</td>
+<td class="Message">Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:44,001</td>
+<td class="Message">Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:44,002</td>
+<td class="Message">Converting PropertySource Config resource &#39;class path resource [application.yml]&#39; via location &#39;optional:classpath:/&#39; (document #1) [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:44,003</td>
+<td class="Message">Converting PropertySource Config resource &#39;class path resource [application.yml]&#39; via location &#39;optional:classpath:/&#39; (document #0) [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:44,004</td>
+<td class="Message">Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper</td>
+<td class="MethodOfCaller">makeEncryptable</td>
+<td class="FileOfCaller">EncryptablePropertySourceConverter.java</td>
+<td class="LineOfCaller">56</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:44,149</td>
+<td class="Message">Property Filter custom Bean not found with name &#39;encryptablePropertyFilter&#39;. Initializing Default Property Filter</td>
+<td class="MethodOfCaller">lambda$null$2</td>
+<td class="FileOfCaller">DefaultLazyPropertyFilter.java</td>
+<td class="LineOfCaller">31</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:45,092</td>
+<td class="Message">Property Resolver custom Bean not found with name &#39;encryptablePropertyResolver&#39;. Initializing Default Property Resolver</td>
+<td class="MethodOfCaller">lambda$null$2</td>
+<td class="FileOfCaller">DefaultLazyPropertyResolver.java</td>
+<td class="LineOfCaller">35</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:45,100</td>
+<td class="Message">Property Detector custom Bean not found with name &#39;encryptablePropertyDetector&#39;. Initializing Default Property Detector</td>
+<td class="MethodOfCaller">lambda$null$2</td>
+<td class="FileOfCaller">DefaultLazyPropertyDetector.java</td>
+<td class="LineOfCaller">35</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:46,845</td>
+<td class="Message">Tomcat initialized with port(s): 9700 (http)</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">TomcatWebServer.java</td>
+<td class="LineOfCaller">108</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:46,924</td>
+<td class="Message">Initializing ProtocolHandler [&quot;http-nio-9700&quot;]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:46,926</td>
+<td class="Message">Starting service [Tomcat]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:46,927</td>
+<td class="Message">Starting Servlet engine: [Apache Tomcat/9.0.45]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:47,364</td>
+<td class="Message">Initializing Spring embedded WebApplicationContext</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:47,365</td>
+<td class="Message">Root WebApplicationContext: initialization completed in 6039 ms</td>
+<td class="MethodOfCaller">prepareWebApplicationContext</td>
+<td class="FileOfCaller">ServletWebServerApplicationContext.java</td>
+<td class="LineOfCaller">289</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:48,487</td>
+<td class="Message">Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@3a17acd4 with name: codeSheepEncryptorBean</td>
+<td class="MethodOfCaller">lambda$null$1</td>
+<td class="FileOfCaller">DefaultLazyEncryptor.java</td>
+<td class="LineOfCaller">32</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:54,086</td>
+<td class="Message">Initializing ExecutorService &#39;applicationTaskExecutor&#39;</td>
+<td class="MethodOfCaller">initialize</td>
+<td class="FileOfCaller">ExecutorConfigurationSupport.java</td>
+<td class="LineOfCaller">181</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:54,559</td>
+<td class="Message">Adding welcome page template: index</td>
+<td class="MethodOfCaller">&lt;init&gt;</td>
+<td class="FileOfCaller">WelcomePageHandlerMapping.java</td>
+<td class="LineOfCaller">57</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:55,380</td>
+<td class="Message">LiveReload server is running on port 35729</td>
+<td class="MethodOfCaller">startServer</td>
+<td class="FileOfCaller">OptionalLiveReloadServer.java</td>
+<td class="LineOfCaller">58</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:55,478</td>
+<td class="Message">Starting ProtocolHandler [&quot;http-nio-9700&quot;]</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:55,599</td>
+<td class="Message">Tomcat started on port(s): 9700 (http) with context path &#39;&#39;</td>
+<td class="MethodOfCaller">start</td>
+<td class="FileOfCaller">TomcatWebServer.java</td>
+<td class="LineOfCaller">220</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:02:55,641</td>
+<td class="Message">Started PuaiApplication in 20.16 seconds (JVM running for 28.194)</td>
+<td class="MethodOfCaller">logStarted</td>
+<td class="FileOfCaller">StartupInfoLogger.java</td>
+<td class="LineOfCaller">61</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:04:15,567</td>
+<td class="Message">Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;</td>
+<td class="MethodOfCaller">log</td>
+<td class="FileOfCaller">DirectJDKLog.java</td>
+<td class="LineOfCaller">173</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:04:15,568</td>
+<td class="Message">Initializing Servlet &#39;dispatcherServlet&#39;</td>
+<td class="MethodOfCaller">initServletBean</td>
+<td class="FileOfCaller">FrameworkServlet.java</td>
+<td class="LineOfCaller">525</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:04:15,578</td>
+<td class="Message">Completed initialization in 9 ms</td>
+<td class="MethodOfCaller">initServletBean</td>
+<td class="FileOfCaller">FrameworkServlet.java</td>
+<td class="LineOfCaller">547</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:04:30,880</td>
+<td class="Message">附件返回的信息：【 {&quot;token&quot;:&quot;749d62fd-00a8-467f-94c5-e37aba130e95&quot;,&quot;n_a_s&quot;:1,&quot;atts&quot;:[{&quot;officeTransformEnable&quot;:&quot;disable&quot;,&quot;new&quot;:false,&quot;extension&quot;:&quot;png&quot;,&quot;extraMap&quot;:{},&quot;icon&quot;:&quot;jpg.gif&quot;,&quot;createdate&quot;:&quot;2022-02-24 10:04&quot;,&quot;description&quot;:null,&quot;mimeType&quot;:&quot;image/png&quot;,&quot;sort&quot;:0,&quot;type&quot;:0,&quot;genesisId&quot;:null,&quot;reference&quot;:&quot;1&quot;,&quot;filename&quot;:&quot;wallls.com_220099.png3411798700472412576.png&quot;,&quot;size&quot;:&quot;876662&quot;,&quot;iconFont&quot;:&quot;img&quot;,&quot;subReference&quot;:&quot;1&quot;,&quot;v&quot;:&quot;28b36da170a02da3d000ff1d377f4214&quot;,&quot;obsObjectKey&quot;:&quot;&quot;,&quot;fileUrl&quot;:&quot;-4440283306008752724&quot;,&quot;id&quot;:&quot;201385113671254501&quot;,&quot;category&quot;:66}]} 】</td>
+<td class="MethodOfCaller">fileUpload</td>
+<td class="FileOfCaller">RecruitmentProcessController.java</td>
+<td class="LineOfCaller">42</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:04:30,882</td>
+<td class="Message">文件类型：【 IDCard 】,文件名称：【 wallls.com_220099.png 】,文件上传OA返回的ID为: 【 201385113671254501 】,文件上传OA返回的URL为: 【 -4440283306008752724 】</td>
+<td class="MethodOfCaller">fileUpload</td>
+<td class="FileOfCaller">RecruitmentProcessController.java</td>
+<td class="LineOfCaller">43</td>
+</tr>
+
+<tr class="info odd">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:14:53,839</td>
+<td class="Message">附件返回的信息：【 {&quot;token&quot;:&quot;af163e4b-94f7-4490-90e4-7c12308eddcb&quot;,&quot;n_a_s&quot;:1,&quot;atts&quot;:[{&quot;officeTransformEnable&quot;:&quot;disable&quot;,&quot;new&quot;:false,&quot;extension&quot;:&quot;jpg&quot;,&quot;extraMap&quot;:{},&quot;icon&quot;:&quot;jpg.gif&quot;,&quot;createdate&quot;:&quot;2022-02-24 10:14&quot;,&quot;description&quot;:null,&quot;mimeType&quot;:&quot;image/jpeg&quot;,&quot;sort&quot;:0,&quot;type&quot;:0,&quot;genesisId&quot;:null,&quot;reference&quot;:&quot;1&quot;,&quot;filename&quot;:&quot;WINDOWS_10.jpg891189807894163585.jpg&quot;,&quot;size&quot;:&quot;726840&quot;,&quot;iconFont&quot;:&quot;img&quot;,&quot;subReference&quot;:&quot;1&quot;,&quot;v&quot;:&quot;5020dc2505c12d7bb086b66d822956f6&quot;,&quot;obsObjectKey&quot;:&quot;&quot;,&quot;fileUrl&quot;:&quot;6439711619920315614&quot;,&quot;id&quot;:&quot;722193121174637143&quot;,&quot;category&quot;:66}]} 】</td>
+<td class="MethodOfCaller">fileUpload</td>
+<td class="FileOfCaller">RecruitmentProcessController.java</td>
+<td class="LineOfCaller">42</td>
+</tr>
+
+<tr class="info even">
+<td class="Level">INFO</td>
+<td class="Date">2022-02-24 10:14:53,841</td>
+<td class="Message">文件类型：【 IDCard Back 】,文件名称：【 WINDOWS_10.jpg 】,文件上传OA返回的ID为: 【 722193121174637143 】,文件上传OA返回的URL为: 【 6439711619920315614 】</td>
+<td class="MethodOfCaller">fileUpload</td>
+<td class="FileOfCaller">RecruitmentProcessController.java</td>
+<td class="LineOfCaller">43</td>
+</tr>

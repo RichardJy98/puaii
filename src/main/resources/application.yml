@@ -1,0 +1,106 @@
+server:
+  port: 9700
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    initialization-mode: always
+    continue-on-error: true
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: SpringBootDemoHikariCP
+      max-lifetime: 60000
+      connection-timeout: 30000
+  mvc:
+    static-path-pattern: /**
+  profiles:
+    active: ${profileActive}
+logging:
+  level:
+    com.uto.kibo: info
+  file:
+    path: ./logs_puai
+  logback:
+    rollingpolicy:
+      max-file-size: 50MB
+      max-history: 30
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.uto.puai.entity
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: auto
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: not_empty
+      #驼峰下划线转换
+      table-underline: true
+      #是否开启大写命名，默认不开启
+      #capital-mode: true
+      #逻辑删除配置
+      #logic-delete-value: 1
+      #logic-not-delete-value: 0
+      db-type: sql_server
+    #刷新mapper 调试神器
+  #    refresh: true
+  # 原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+jasypt:
+  encryptor:
+    property:
+      prefix: encryption(
+      suffix: )
+    bean: codeSheepEncryptorBean
+
+---
+# dev环境
+spring:
+  datasource:
+    url: jdbc:sqlserver://0rchid.cc:41697;databaseName=puai
+    username: sa
+    password: encryption(3hPUX41Is1iJoA2AL/6cGvfvnCuNEkI3TyWhl67wmDqFgLGHp24KL+PNUA5izASE)
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  config:
+    activate:
+      on-profile: dev
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+---
+# test环境
+spring:
+  datasource:
+    url: jdbc:sqlserver://127.0.0.1:1433;databasename=U8cloud
+    username: sa
+    password: encryption(NwxMA2ROTzdCDd9maSKYFdxIYHVjQpi3Xv8hQWjjNvULSsK8IXfq4nerAGt1WQyz)
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  config:
+    activate:
+      on-profile: test
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+---
+# pro正式环境
+spring:
+  datasource:
+    url: jdbc:sqlserver://192.168.20.56:1433;databasename=U8cloud
+    username: sa
+    password: encryption(SkVj8EnreAXQr+V0dl99Yb8zpL/vqZqraT7K6k5X8et8pXYZPKLkjZAhrVzyQ5DO)
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  config:
+    activate:
+      on-profile: pro
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
