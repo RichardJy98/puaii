@@ -9,6 +9,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.PreDestroy;
 import java.lang.management.ManagementFactory;
@@ -21,6 +22,7 @@ import java.lang.management.ManagementFactory;
  */
 @Slf4j
 @SpringBootApplication
+@EnableTransactionManagement
 @MapperScan("com.uto.puai.mapper")
 public class PuaiApplication implements ApplicationRunner {
 

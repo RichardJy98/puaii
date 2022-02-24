@@ -178,6 +178,7 @@
                     <include>application.yml</include>
                     <include>static/**/*.*</include>
                     <include>templates/*.*</include>
+                    <include>favicon.ico</include>
                     <include>application.properties</include>
                     <include>generator.properties</include>
                     <include>application-${profileActive}.yml</include>

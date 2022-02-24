@@ -6,8 +6,10 @@ import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.uto.puai.config.Cap;
+import com.uto.puai.service.Formmain0551Service;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +18,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -27,7 +31,11 @@ import java.util.Map;
 @Slf4j
 @RestController
 public class RecruitmentProcessController {
-    String filePath = "";
+
+    @Autowired
+    private Formmain0551Service service;
+
+    private static List<Map<String, Object>> filesList = new ArrayList<>(16);
 
     @PostMapping("/file/upload")
     public String fileUpload(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
@@ -39,6 +47,13 @@ public class RecruitmentProcessController {
         JSONObject response = new JSONObject(HttpUtil.post(url, data)).set("token", fileToken);
         String id = ((JSONObject) response.getJSONArray("atts").get(0)).getStr("id");
         String fileUrl = ((JSONObject) response.getJSONArray("atts").get(0)).getStr("fileUrl");
+
+        //将上传的文件进行
+        data.clear();
+        data.put("id", id);
+        data.put("fileUrl", fileUrl);
+        filesList.add(data);
+
         log.info("附件返回的信息：【 {} 】", response);
         log.info("文件类型：【 {} 】,文件名称：【 {} 】,文件上传OA返回的ID为: 【 {} 】,文件上传OA返回的URL为: 【 {} 】", type, file.getOriginalFilename(), id, fileUrl);
         JSONObject result = new JSONObject(16);
@@ -388,10 +403,14 @@ public class RecruitmentProcessController {
         values.set("sub", newSub);
         log.info("本次提交的员工登记表单数据为: 【 {} 】", values);
         String result = Cap.initiationProcessChart(values.getStr("templetcode"), values.toString(), Cap.token());
+
         if (result.startsWith("{")) {
             log.info("登记失败,返回信息为: 【 {} 】", result);
             return new JSONObject("{\"message\": \"员工信息登记失败\"}");
         } else {
+            //将每个上传的文件进行修改
+            service.updateField(result, filesList);
+
             log.info("登记成功,员工信息登记协同主表ID为: 【 {} 】", result);
             return new JSONObject("{\"message\": \"员工信息登记成功\"}");
         }
